@@ -208,6 +208,14 @@ header {
             font-size: 64px;
             text-align: center;
             margin-bottom: 0px;
+            @include xsm{
+                font-size: 30px;
+                margin: 5% 0;
+            }
+            @include sm{
+                font-size: 35px;
+                margin: 4% 0;
+            }
         }
         hr{
             border-top: 2px solid rgb(175, 175, 175);
@@ -222,11 +230,12 @@ header {
             color: #f7f7f7;
             margin-bottom: 2%;
             text-align: center;
-            // @include xsm{
-            // }
-            // @include sm{
-            //     text-align: center;
-            // }
+            @include xsm{
+                font-size: 20px;
+            }
+            @include sm{
+                font-size: 22px;
+            }
         }
         .home-btn{
             display: inline-flex;
@@ -247,6 +256,15 @@ header {
             position: relative;
             z-index: 1;
             overflow: hidden;
+            @include xsm{
+                font-size: 18px;
+                min-width: 130px;
+                margin: 5px;
+            }
+            @include xsm{
+                font-size: 20px;
+                min-width: 150px;
+            }
             &:hover{
                 // transform: scale(1.01);
                 color: #ffffff;
@@ -285,6 +303,28 @@ header {
             box-shadow:  27px 27px 53px #0b0b0b,
                         -27px -27px 53px #212121;
             transition: all 400ms cubic-bezier(0.29, 0.9, 0.26, 1);
+            @include xsm{
+                width: 90%;
+            }
+            @include sm{
+                width: 80%;
+            }
+            .main-title{
+                @include xsm{
+                    font-size: 20px;
+                }
+                @include sm{
+                    font-size: 22px;
+                }
+            }
+            .title{
+                @include xsm{
+                    font-size: 18px;
+                }
+                @include sm{
+                    font-size: 20px;
+                }
+            }
             &:hover{
                 box-shadow:  -27px -27px 53px #0b0b0b,
                             27px 27px 53px #212121;
@@ -333,12 +373,21 @@ hr{
 .about{
     display: flex;
     padding-bottom: 3%;
+    @include xsm{
+        flex-direction: column;
+    }
     .about-bx{
         // flex: 1;
         flex: 0 1 (100%)/2;
         // background-color: red;
         &.about-bx1{
             padding: 4% 4% 4% 12%;
+            @include xsm{
+                padding-left: 6%;
+            }
+            @include sm{
+                padding-left: 6%;
+            }
         }
         .about-img{
             width: 100%;
@@ -360,9 +409,24 @@ hr{
         font-size: 24px;
         text-align: center;
         margin-bottom: 6px;
+        @include xsm{
+            font-size: 18px;
+        }
+        @include sm{
+            font-size: 20px;
+        }
         &.giveaways-content1{
             width: 60%;
             margin: 0% auto;
+            @include xsm{
+                width: 98%;
+            }
+            @include sm{
+                width: 90%;
+            }
+            @include md{
+                width: 85%;
+            }
         }
     }
     .dot{
